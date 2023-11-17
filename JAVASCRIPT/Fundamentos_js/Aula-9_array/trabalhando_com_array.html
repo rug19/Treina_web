@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Arrays</title>
+</head>
+<body>
+    <script>
+        /*Inserido e Removendo valores do Array*/
+
+
+        //push é utilizado para inserir item no final do array.
+        //unshift é utilizado para inserir um item no começo.
+        //pop remove o ultimo valor do array.
+        //shift remove o primeiro valor do array.
+        /*splice remove ou inserir o valor no meio do array, é preciso indicar a posição do elemento, paramentro e a quantidade
+        de valores que precisam ser removidos. Para inserir é preciso colocar a posição, paramentro e o valores que tem que adicionar.  
+        */
+        
+        let precos = [1, 4, 5, 9, 7, 8];
+        
+
+        precos.push(2);
+        precos.unshift(6);
+        precos.pop();
+        precos.shift();
+        precos.splice(3, 2, 'a' )
+
+       
+
+        /* Para acesar um elemento especifico de um array basta colocar o nome do 
+        array e a possição do elemento que deseja acessar.*/
+
+        console.log(precos[0]);
+
+        //Para acessar o ultimo elemento podemos guardare em uma variavel ou acessar direito no console.log.
+
+        // Guardando o ultimo elemnto em uma variavel.
+
+        let ultimo = preco.length - 1;
+
+        preco[ultimo]
+
+        // Acessando o elemento direto no console.lo.
+        
+        precos[precos.length -1]
+
+        console.log(precos[precos.length -1]);
+
+    </script>
+</body>
+</html>

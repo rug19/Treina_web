@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos e Symbols</title>
+</head>
+<body>
+    <script>
+        // Trabalhanado com symbols
+
+         /*Symbols é um tipo primitivo, único e imutável. Quando Symbol() é chamado é garantido que irá 
+        retornar um valor único pododendo ter o mesmo output via console.log(),  porém será apenas visual os valores serão considerados
+        distintos.*/
+
+        /* Para acessar a propriedade do symbol é necessário utilizar o colchetes e colocar a váriavel que desaeja acessa a propriedade.
+             ex: lapis[usado]
+        */
+
+        /* */
+
+        let usado = Symbol('usado');
+
+        let lapis = {
+            cor: 'preto',
+            tamanho: 15,
+            [usado]: true
+        };
+
+        // Embora a descrição dos symbols sejam iguais, os dois estão ocupado espaços diferentes na memória.
+
+        let meuSymbol = Symbol('cpf');
+        let outroSymbol = Symbol('cpf');
+
+        // Para que serve o Symbol
+
+        /* Podemos utilizar symbols para adiconar propriedades em um objeto mas que queremos apenas manter esse valores
+        para nós e para outras operações objetos fiquem invisiveis.*/
+
+        
+
+        
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

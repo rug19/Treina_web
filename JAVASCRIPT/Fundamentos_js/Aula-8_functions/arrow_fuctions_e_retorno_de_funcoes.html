@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions e Retorno de Funções</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        /*Arrow functions é muito utilizada quando precisamos criar uma função anonima.
+        Podemos armazenar elas dentro de uma variável.*/
+
+        setTimeout (() => {
+            console.log('passaram 2 segundos')
+
+        }, 2000);
+
+        let minhaFuncao = () => {
+            console.log('Sou uma arrow function');
+        }
+
+        minhaFuncao();
+
+        // Retorno de função
+
+        function soma(numero1, numero2) {
+            // Return serve para que quando a função é executada retorne alguma valor.
+            return numero1 + numero2;
+        }
+
+        let total1 = soma(2, 3);
+
+
+
+
+        // Utilizando arrow function
+
+        /* 1- Quando temos somente um parametro podemos retirar os parenteses,
+        mas se tivermo mas de um é obrigatorio a utilização dos parenteses.
+        
+        2 - Qaundo temos uma arrow function e iremos executar uma unica linha, também não é preciso colocar as chaves e
+        nem do comando return para retornar o valor.
+        */
+
+        function dobro(numero) {
+            return numero * 2;
+
+        }
+
+        let dobroArrow = numero => numero * 2;
+
+        let total2 = dobroArrow(9);
+        console.log(total2);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecendo o JSON e a sua importância</title>
+</head>
+
+<body>
+    <script>
+        // JSON: JavaScript Object Notation.
+        /* Ele um padrão para agente escrever com a sitaxe do JavaScript, 
+        ele é suportado por varias linguagens de programação e tem como objetivo
+        de transferir dados para varias linguagens de programação diferentes.*/
+        /* O JASON possue uma limitação quais tipos de codigo podem ser utilizado, exemplo deles são: bolean, null,
+        números(sendo inteiros ou com casa  decimais, strings, objetos e arrays.*/
+
+        // JSON 
+
+        const lapisJSON = {
+            "cor": "preto",
+            "tamanho": 15.2,
+            "usado": false,
+        }
+
+        // Function 
+
+        const lapis = {
+            cor: 'preto',
+            tamanho : 15, 
+            escrever(){
+                console.log('Escrevendo...');
+            },
+            apagar(){
+                console.log('Apagando...');
+            }
+        };
+
+        /*Quando precisamos enviar um objeto para outro programa 
+        precisamos transforma-lo para uma string, para isso o JavaScript possue
+        uma função que fica dentro do objeto JSON. */
+         
+        // Função para transformar JSON em string.
+
+        JSON.stringify(lapis)
+
+        // Função para transformar string em JSON.
+
+        JSON.parse('{"cor":"preto","tamanho":15}');
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendedo o escorpo de variaveis no Javascript</title>
+</head>
+<body>
+    <script>
+
+        /*O escopo em JavaScript se refere à visibilidade de variáveis e funções dentro de um programa.
+         Quando uma variável ou função é declarada em um determinado escopo,
+         ela só pode ser acessada dentro daquele escopo ou de escopos internos a ele. 
+         Podemos determinar que no JavaScript tem dois tipos de escopo, o global e local.
+        */
+
+        //Podemos dizer que a variável "a" só existe dentro da função chamada São Paulo.
+        function SaoPaulo(){
+            var a = 10;
+
+        }
+
+        //Já aqui podemos utilizar a variável da função Parana na função de curitiba pode estão dividindo o mesmo ecorpo.
+        function Parana(){
+            var a = 5;
+            function Curitiba(){
+                var b = 6;
+            }
+        }
+
+    </script>
+</body>
+</html>

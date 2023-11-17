@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis locais e globais</title>
+</head>
+
+<body>
+    <script>
+        /* Variável local e global
+1 - Variaveis locais só existe dentro de alguma função.
+2 - Variaveis globais ela está acessivel de qulaquer lugar.
+3 - Podemos declarar uma variável global com o "window."
+4 - Iremos utlizar variáveis globais para que elas sejam acessiveis em todo o sistema.
+5-  vantagens de ter variaveis locais é que elas só funcionan dentro do mundinho delas, 
+sendo assim podemos utilizar outras variaveis com o mesmo nome.
+*/
+
+        //Exemplo de uma variável global.
+
+        window.a = 7;
+
+        /* Exemplo de uma variável local, no caso nesse codigo seria a variável "numero", 
+        onde a mesma só funciona dentro da função tabuada.*/
+
+        function tabuada(numero = 0, limite = 10) {
+            for (var j = 1; j <= limite; j++) {
+                console.log(`${numero} x ${j} = ${numero * j}`)
+
+            }
+        }
+
+        tabuada(4, 9);
+    </script>
+</body>
+
+</html>

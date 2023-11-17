@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Agrupando Valores</title>
+</head>
+
+<body>
+    <script>
+
+        
+        // O que são objetos?
+
+        /* Objetos servem para agrupar váriaveis e funções para representarmos algum objeto,
+        sendo ele real ou não.*/
+
+        // Objetos no JavaScript
+
+        /* Para criarmos um objeto no JavaScript iniciamos com a variavel e o nome do objeto e abrimos chaves "{}"*/
+        //Dentro do objeto indicamos a propriedade e o valor.
+
+
+
+        let lapis = {
+            cor: 'preto',
+            tamanho: 15,
+            escrever() {
+                console.log('escrevendo...')
+
+            },
+            apagar() {
+                console.log('apagando...')
+            }
+        };
+
+        console.log(lapis);
+
+        // Para acessar uma propriedade ou função colocamos o nome do objeto,  "." e nome da propriedade ou função.
+
+        console.log(lapis.cor);
+
+        //para executar a função colocamos os paretenses.
+
+        lapis.escrever();
+
+        // É possível acessar as propriedades utilizando colchetes também.
+        //Podemos colocar uma propriedade de um objeto dentro de uma váriavel
+
+        let propriedade = 'tamanho'
+
+        console.log(lapis[propriedade])
+        console.log(lapis['cor'])
+
+        /* Para adicionar novas propriedades para o nosso objeto basta indicar o nome do objeto, 
+        junto com o nome da nova propriedade*/
+        
+
+        lapis.corDaBorracha = 'rosa';
+        lapis['corDoLapis'] = 'preto';
+
+        /*Para alterar o valor da propriedade basta indicar o nome do objeto e atribuir outro valor*/
+
+        lapis.cor = 'azul';
+
+        /* Para remover chamamos um operador "delete"*/
+
+        delete lapis.tamanho;
+        console.log(lapis);
+
+        /* Para saber todas as chaves que um objeto possue pode utilizar o object.key()*/
+
+        console.log(Object.keys(lapis));
+
+        /* É possivel utilizar uma váriavel const para um objeto e fazer alterções ou adicionar proprieades, o que não podemos fazer é reatribuir um valor
+        para a uma váriavel const */
+
+        lapis.cor = 'rosa';
+        lapis['cor'] = 'preto';
+        
+
+
+
+
+        
+
+
+        
+
+
+    </script>
+</body>
+
+</html>

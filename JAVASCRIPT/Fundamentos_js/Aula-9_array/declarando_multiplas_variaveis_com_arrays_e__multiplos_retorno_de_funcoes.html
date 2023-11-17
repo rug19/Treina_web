@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declarando múltiplas váriaveis com Arrays e múltiplos retornos com funções</title>
+</head>
+
+<body>
+    <script>
+
+        /*Podemos declarar varias variaveis pegando os valores certas possições do array.*/
+
+        //Exemplo 1
+
+        // let precos = [1, 4, 5, 7];
+
+        // let preco4 = precos[0],
+        //     preco5 = precos[1],
+        //     preco6 = precos[2];
+
+        //     console.log(preco4, preco5,preco6);
+
+        /*Exemplo 2: Embora estejamos declarando uma variavel e utilizando colchetes,
+        não se trata de um array e sim um forma masi simples de declara variaveis. Esse exempolo
+        é a mesma coisa do exemplo de forma simplificada. 
+        */
+
+        // let [preco1, preco2, preco3] = precos; 
+        // console.log(preco1, preco2,preco3);
+
+        /* Multiplos retornos com funcoes */
+
+        /*Podemos observar que for criado uma função onde essa função retorna os valoes 5 e 67,
+        criamos variaveis para rceber o retorno da minhaFuncao e assim imprimir os valores separados no consele.log
+        chamados as variaveis valor 1 e valor2. 
+         */
+        function minhaFuncao(){
+            return [5, 67];
+        }
+
+        let [valor1, valor2] = minhaFuncao();
+        console.log(valor1, valor2);
+
+    </script>
+</body>
+
+</html>

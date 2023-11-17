@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+</head>
+
+<body>
+    <!-- Neste desafio você vai ter uma variável "numeros", que vai receber um Array com números.
+    Você deve imprimir qual o menor e maior número do Array. -->
+    <script>
+
+        let numeros = [5, 3, 2, 7, 8, 9, 4];
+        let menor = numeros[0];
+        let maior = numeros[0];
+
+        function main(numeros) {
+            for (let i = 1; i < numeros.length; i++) {
+                if (numeros[i] < menor) {
+                     menor = numeros[i];
+                }
+                if (numeros[i] > maior) {
+                     maior = numeros[i];
+
+                }
+            }
+            
+        }
+
+        main(numeros);
+        console.log(menor);
+        console.log(maior);
+        
+        
+       
+    </script>
+</body>
+
+</html>

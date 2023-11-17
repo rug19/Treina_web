@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4 </title>
+</head>
+
+<body>
+    <!-- Neste desafio você vai receber uma variável chamada "meusObjetos", que é um Array de objetos que possuem vários campos. Um dos campos se chama "titulo".
+    Você também vai receber uma variável chamada "titulo".Sua tarefa é criar uma função que retorne o objeto que possui o título presente na variável "titulo”. -->
+    <script>
+
+
+        let titulo = 'abc';
+        let meusObjetos = [{
+            titulo: "abc",
+            outroCampo: "123"
+        }, {
+            titulo: "def",
+            outroCampo: 321
+        }]
+
+        function filtrar (){
+            for(let i = 0; i < meusObjetos.length; i++){
+                if(meusObjetos[i].titulo === titulo){
+
+                    return meusObjetos[i];
+                }
+
+            }
+
+        }
+      console.log(filtrar());
+
+        
+        
+
+        
+    </script>
+
+</body>
+
+</html>

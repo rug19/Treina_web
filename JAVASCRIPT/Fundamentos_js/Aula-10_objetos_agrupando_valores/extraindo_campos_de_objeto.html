@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extraindo Campos de Objetos</title>
+</head>
+<body>
+    <script>
+         /* Extraindo propridades dos objetos*/
+
+         // objeto
+
+         let lapis = {
+            cor: 'preto',
+            tamanho: ' 15',
+            usado: false
+         };
+
+         // 1° forma de extrair propriedades dos objetos 
+
+         let cor = lapis.cor, 
+         tamanho = lapis.tamanho;
+
+         // 2° forma mais abreviada
+
+         let {cor, tamanho} = lapis;
+
+         // Podemos também usar em funções 
+
+         function minhaFuncao(obj){
+            console.log(obj.cor);
+             
+         }
+
+         minhaFuncao(lapis);
+
+         // Podemos também extrair as propriedades de uma função diretamente 
+
+         function minhaFuncao({tamanho}){
+            console.log(tamanho);
+
+         }
+         minhaFuncao(tamanho);
+
+         // Retornando um afunção objeto 
+
+         function minhaFuncao(){
+            return  {
+                cor: 'preto',
+                tamanho: 15, 
+                usado: false
+            }
+
+            let {tamanho} = minhaFuncao();
+            console.log(tamanho);
+         }
+
+
+
+    </script>
+</body>
+</html>

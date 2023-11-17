@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparado objetos, o que é Referência</title>
+</head>
+<body>
+    <script>
+        /* O que é uma referência?
+
+        É quando temos uma váriavel acessando um outro objeto, dizemos que eles estão referênciando o mesmo objeto 
+        no mesmo lugar e na mesma memória.
+        
+        */
+
+
+        /*Quando as váriaveis que criamos são primitivas, essas váriaveis ficam armazenadas em espaço diferentes,
+        acessa-las e altera-las. Então quando fazemos a comparação entre as váriaveis, o JavaScript faz a comparação do valor
+        que está armazenado. Então quando informamos que o valor n2 = n1, estamos dizemos que o valor da váriavel n1 irá passar 
+        para a váriavel n2. */
+
+        let n1 = 15;
+        let n2 = n1;
+
+        /* Diferente de uma váriavel primitiva que clona o valor para outra váriavel e armazena outro espaço, os 
+        objetos funciona de um forma diferente, quando criamos um obj1 com uma propriedade e depois criamos outro obj2 
+        e passamos a propriedade para outro objeto como no exemplo abaixo, não irá criar outro espaço para armazenar e sim 
+        iremos ter a cesso a propriedade do primeiro objeto criado anteriormente. 
+         */ 
+
+         let obj1 = {nome: "maria"};
+         let obj2 = obj1;
+
+         /*Porém se criarmos dois objetos mesmo com o mesmo valor, ai sim iremos acessar dois objetos diferentes,
+         onde os dois irão ficar em um espaço diferente podendo alterar um sem que o outro seja modificado. Então ao 
+         fazer a comparação entre esse dois objetos, o resultado será falso, pois se trata de dois objetos diferentes. */
+
+         let objeto1 = {nome: "maria"}
+         let objeto2 = {nome: "maria"}
+
+         /* Para sabemos se os dois objetos estão como os mesmo valores, existem varias técnicas para fazer isso, porém
+         iremos utilizar o JSON para fazer isso. Então para ter um cópia de um objeto precisamos clonado. Para isso iremos utilizar
+         o JSON.stringfy para transformar em uma string e depois utilizar o JSON.perse para transformar um objeto, assim podemos fazer 
+         a coparação dos valores dos objetos.*/
+
+         let obj1 = {nome: 'Bruna'};
+
+         let obj2 = JASON.parse(JSON.stringify(obj1));
+
+         /*Outra forma para comparar os valores do objetos são iguais podemos transformar os bjetos em string utilizando o JSON.stringify.*/
+
+         let obj1 = {nome: 'Bruna'};
+         let obj2 = {nome: 'Bruna'};
+
+         console.log(JSON.stringify(obj1) === JSON.stringify(obj2));
+
+         /*Lembrando que array também é objeto, então se passarmos uma array para outr
+          */
+
+
+
+
+
+    </script>
+</body>
+</html>

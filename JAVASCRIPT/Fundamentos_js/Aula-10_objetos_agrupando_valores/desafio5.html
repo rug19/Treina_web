@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+</head>
+
+<body>
+    <script>
+        /*Neste desafio você vai receber um objeto na variável "meuObjeto".
+        Sua tarefa é retornar um novo objeto onde as chaves e valores do objeto original estão invertidas.*/
+
+        let meuObjeto = {
+            "a": "b"
+        };
+
+        function main() {
+            const novoObjeto = {},
+                campos = Object.keys(meuObjeto);
+            for (let i = 0; i < campos.length; i++) {
+                const campo = campos[i];
+                novoObjeto[meuObjeto[campo]] = campo;
+            }
+
+            console.log(novoObjeto)
+        }
+        main();
+    </script>
+
+</body>
+
+</html>

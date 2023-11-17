@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Anônimas e Callbacks</title>
+</head>
+
+<body>
+
+    <button>Clique aqui</button>
+    <script>
+        /* Podemos armazenar funções dentro de variáveis.
+        Podemos também armazenar funções dentro de outras funções. 
+        Quando chamamos uma função que ela vem depois ela é chamada de callback.*/
+
+        /* Abaixo podemos indetificar que temos uma função que está armazenada dentro da variável
+        minha função e essa função é chamada de tabuada, quando tiramos o nome dessa função, chamamos 
+        de função anonima.*/
+
+        let minhaFuncao = function tabuada(numero = 0, limite = 10) {
+            for (var j = 1; j <= limite; j++) {
+                console.log(`${numero} x ${j} = ${numero * j}`)
+
+            }
+        }
+
+        //Função Tabuada
+
+        const button = document.querySelector('button');
+
+        function tabuada(numero = 0, limite = 10) {
+            for (var j = 1; j <= limite; j++) {
+                console.log(`${numero} x ${j} = ${numero * j}`)
+
+            }
+        }
+        //Função para imprimir a palavra Olá
+
+        function ola() {
+            console.log('Olá');
+        }
+
+        // Função click para executar a função somente quando apertar no botão
+         button.addEventListener('click', function(){
+            ola();
+            console.log(9 + 2);
+
+         });
+
+        console.log('começou');
+
+        //Função acicrona
+        setTimeout(function () {
+            console.log('passaram 2 segundos ')
+        }, 2000);
+    </script>
+</body>
+
+</html>

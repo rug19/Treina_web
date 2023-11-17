@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Funções JavaScript</title>
+</head>
+
+<body>
+    <Script>
+        /* Declaramos a função com a palavra function, se imprirmos com o nome função
+        irá aparece todas a função que foi criada. Se colocarmos parenteses depois do nome
+        de uma função siginifica que queremos executar aquela função. É possivel também colocar 
+        variáveis dentro do parenteses da função tabuada para atribuir outros valores, também sendo possivel
+        colocar mais de uma variável utilizando a virgula.*/
+
+        //Exemplo 1 : Método utilizando variáveis fixas
+
+        function tabuada() {
+            for (var i = 1; i <= 3; i++) {
+                for (var j = 1; j <= 10; j++) {
+                    console.log(`${i} x ${j} = ${i * j}`)
+
+                }
+            }
+
+        }
+
+        tabuada();
+
+        //Exemplo 2: Aplicando uma variável sem valor fixo.
+
+        function tabuada(numero) {
+            for (var j = 1; j <= 10; j++) {
+                console.log(`${numero} x ${j} = ${numero * j}`)
+
+            }
+        }
+
+        tabuada(30);
+
+        //Exemplo 3: Adicionand variáveis dentro da função da tabuada.
+
+        function tabuada(numero = 0, limite = 10) {
+            for (var j = 1; j <= limite; j++) {
+                console.log(`${numero} x ${j} = ${numero * j}`)
+
+            }
+        }
+
+        tabuada(4, 9);
+
+    </Script>
+</body>
+
+</html>

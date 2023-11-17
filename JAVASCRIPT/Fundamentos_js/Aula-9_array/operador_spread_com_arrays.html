@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Spread com Arrays</title>
+</head>
+<body>
+    <script>
+        /*Operador Spread*/
+
+        // O operador spread podemos armazenar o resto da váriaveis de um array utlizando "..."
+
+        let precos =  [ 1, 4, 5, 6, 8];
+
+        let [preco1, preco2, ...preco3] = precos;
+
+    console.log(preco3);
+
+        // Podemos clonar um array e colocar dentro de outro array utilizando o operador spread. 
+        //É possível acessar qualquer elemento do array que está dentro de outro array, basta informar o parâmentro e a possição do valor.
+
+
+        let novoArray = ['a', ...precos, false];
+
+        console.log(novoArray);
+
+        /* Operador spread com funções*/
+
+        function soma (numero1, numero2){
+            return numero1 + numero2;
+
+        }
+
+        /* Nesse exemplo o array numeros recebe os valores 4 e 56 e utilizando a função soma ele soma o número
+        na posição 0 mais o o número na posição 1
+        */ 
+
+        let numeros = [4, 5];
+        console.log(soma(numeros[0], numeros[1]))
+
+        /* Podemos também utilizar o operador spread para receber o dois valores e realizar a soma com a função*/
+
+        console.log(soma(...numeros))
+
+        /* Se colocarmos outra variaveis antes do operador spread, essa variavel irá receber o primeiro parametro que foi passado,
+        enquanto o perador spread irá receber o resto dos valores */ 
+        
+        function minhaFuncao (primeiro, ...parametros){
+            console.log('primeiro: ', primeiro)
+            console.log('outros: ', parametros);
+        }
+
+        minhaFuncao(4, 5, 6, 7, 9);
+
+        //Exemplo de uso, somando multiplos valores utilizado o operador spread.
+
+        function soma(...numeros){
+            let total = 0;
+
+            for(let i = 0; i < numeros.length; i++){
+                 total += numeros[i];
+            }
+
+            return total;
+        }
+        console.log(soma(...precos));
+
+
+    </script>
+</body>
+</html>

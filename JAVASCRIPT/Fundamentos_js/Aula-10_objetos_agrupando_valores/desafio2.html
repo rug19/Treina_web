@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+</head>
+
+<body>
+    <script>
+        /*Neste desafio vamos simular um elevador.
+
+        
+Crie um objeto em uma variável chamada "elevador". Esse objeto deve ter:
+Uma propriedade chamada "totalAndares" com o valor 3;
+Uma propriedade chamada "andarAtual" com o valor 0;
+Uma função chamada “subir”, que ao ser executada aumenta a variável “andarAtual”. Lembrando que não deve permitir subir além do total de andares existentes;
+Uma função chamada "descer", que ao ser executada diminui a variável "andaratual". Lembrando que não deve permitir descer abaixo de 0;
+As funções "subir" e "descer" também devem imprimir o número do novo andar em que o elevador se encontra;
+Mesmo que o elevador não possa mais subir ou descer, ele ainda deve imprimir o andar em que o elevador se encontra.*/
+
+
+        let elevador = {
+            totalAndares: 3,
+            andarAtual: 0,
+            subir() {
+                if (elevador.andarAtual < elevador.totalAndares) {
+                    elevador.andarAtual++;
+                }
+                console.log(elevador.andarAtual);
+            },
+            descer() {
+                if (elevador.andarAtual > 0) {
+                    elevador.andarAtual--;
+                }
+                console.log(elevador.andarAtual);
+            }
+
+        }
+        console.log(elevador.andarAtual);
+        console.log(elevador.totalAndares);
+        elevador.subir();
+        elevador.descer();
+        elevador.descer();
+        elevador.subir();
+        elevador.subir();
+        elevador.subir();
+        elevador.subir();
+    </script>
+</body>
+
+</html>

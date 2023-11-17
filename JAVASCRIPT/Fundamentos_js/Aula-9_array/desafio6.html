@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+</head>
+
+<body>
+    <!-- Neste desafio você vai ter uma variável "frase", que vai receber uma String. 
+        Sua tarefa é imprimir essa String sem as vogais. As frases serão testadas sem acentos e
+         apenas com letras minúsculas. -->
+    <script>
+        function vogal(letra) {
+            if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+                return true
+            }
+
+            return false;
+
+        }
+
+        let frase = "ola developers";
+        let novaFrase = '';
+        for (let i = 0; i < frase.length; i++) {
+            if (!vogal(frase[i])) {
+                novaFrase += frase[i];
+
+            }
+
+        }
+        console.log(novaFrase);
+    </script>
+
+</body>
+
+</html>

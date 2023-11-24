@@ -7,3 +7,8 @@ let dobro = (numero) => {
 };
 
 console.log(dobro(2));
+
+
+
+
+

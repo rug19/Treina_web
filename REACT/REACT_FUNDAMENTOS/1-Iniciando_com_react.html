@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando com React</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+    <!-- Criando elementos manualmente utilizando React CDN  -->
+    <script>
+        const minhaDiv = document.querySelector('#app');
+        ReactDOM.render(
+            React.createElement('h1', null, 'Hello World!'),
+            minhaDiv
+        );
+
+    </script>
+
+</body>
+
+</html>
